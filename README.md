@@ -1,5 +1,5 @@
 <div align= "center">
-    <h1> Official repo for LL3DA <img src="./assets/images/avatar_bot.jpg" width="35px"></h1>
+    <h1> Official repo for LL3DA <img src="./assets/icon.png" width="35px"></h1>
 
 </div>
 
