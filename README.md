@@ -71,7 +71,7 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 
 ## 📖 Citation
 
-If you find our code or paper helps, please consider citing:
+If you find our code or paper helps, please consider starring ⭐ us and citing:
 
 ```bibtex
 ```
