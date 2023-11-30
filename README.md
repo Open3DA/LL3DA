@@ -78,7 +78,7 @@ If you find our code or paper helps, please consider citing:
 
 ## Acknowledgments
 
-Thanks to [Vote2Cap-DETR](https://github.com/ch3cook-fdu/Vote2Cap-DETR), [T2m-gpt](https://github.com/Mael-zys/T2M-GPT), [3D-LLM](https://github.com/UMass-Foundation-Model/3D-LLM), [Scan2Cap](https://github.com/daveredrum/Scan2Cap), and [3DETR](https://github.com/facebookresearch/3detr). We borrow some of their codes and data.
+Thanks to [Vote2Cap-DETR](https://github.com/ch3cook-fdu/Vote2Cap-DETR), [3D-LLM](https://github.com/UMass-Foundation-Model/3D-LLM), [Scan2Cap](https://github.com/daveredrum/Scan2Cap), and [3DETR](https://github.com/facebookresearch/3detr). We borrow some of their codes and data.
 
 
 ## License
