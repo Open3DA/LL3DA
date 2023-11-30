@@ -10,14 +10,14 @@
   <a href="https://ll3da.github.io/">💻Project Page</a> •
   <a href="https://arxiv.org/abs/2306.14795">📄Arxiv Paper</a> •
   <a href="https://www.youtube.com/watch?v=224JzkdHjfg">🎞YouTube</a> •
-  <a href="https://huggingface.co/spaces/OpenMotionLab/MotionGPT">🤗HuggingFace Demo</a> •
+  <a href="xxxxxx">🤗HuggingFace Demo</a> •
   <a href="#️-faq">FAQ</a> •
   <a href="#-citation">Citation
 </p>
 
 </div>
 
-![teaser.gif](assets/teaser.gif)
+![teaser.gif](assets/teaser-simutaneous.gif)
 
 
 <!-- <div align="center">
