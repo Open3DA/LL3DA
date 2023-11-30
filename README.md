@@ -31,7 +31,7 @@
 
 ## 🏃 Intro LL3DA
 
-LL3DA is a Large Language 3D Assistant that could respond to both visual and textual interactions with the **complex 3D environments**.
+LL3DA is a Large Language 3D Assistant that could respond to both visual and textual interactions with **complex 3D environments**.
 <!-- 
 <details>
     <summary><b>Technical details</b></summary> -->
