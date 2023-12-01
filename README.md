@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://ll3da.github.io/">💻Project Page</a> •
-  <a href="https://arxiv.org/abs/2306.14795">📄Arxiv Paper</a> •
+  <a href="https://arxiv.org/abs/2311.18651">📄Arxiv Paper</a> •
   <a href="https://www.youtube.com/watch?v=224JzkdHjfg">🎞YouTube</a> •
   <a href="xxxxxx">🤗HuggingFace Demo</a> •
   <a href="#️-faq">FAQ</a> •
