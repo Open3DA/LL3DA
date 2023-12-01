@@ -11,7 +11,6 @@
   <a href="https://arxiv.org/abs/2311.18651">📄Arxiv Paper</a> •
   <a href="https://www.youtube.com/watch?v=224JzkdHjfg">🎞YouTube</a> •
   <a href="xxxxxx">🤗HuggingFace Demo</a> •
-  <a href="#️-faq">FAQ</a> •
   <a href="#-citation">Citation
 </p>
 
