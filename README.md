@@ -72,7 +72,15 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 
 If you find our code or paper helps, please consider starring ⭐ us and citing:
 
-```bibtex
+```{bibtex}
+@misc{chen2023ll3da,
+    title={LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning}, 
+    author={Sijin Chen and Xin Chen and Chi Zhang and Mingsheng Li and Gang Yu and Hao Fei and Hongyuan Zhu and Jiayuan Fan and Tao Chen},
+    year={2023},
+    eprint={2311.18651},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
 
 ## Acknowledgments
