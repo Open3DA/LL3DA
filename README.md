@@ -73,6 +73,8 @@ Download the pre-processed BERT embedding weights from [huggingface](https://hug
 <details>
   <summary><b>Data Preparation</b></summary>
 
+Our repo requires the 3D data from ScanNet, the natural language annotations, and the pre-trained LLM weights.
+
 **Step 1. Prepare ScanNet 3D Data**
 
 1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
@@ -88,6 +90,8 @@ TODO
 
 
 **Step 3. \[Optional\] Download Pre-trained LLM weights**
+
+If your server has no trouble auto-downloading pre-trained LLM weights from huggingface🤗, you could skip this step.
 
 Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
 ```
