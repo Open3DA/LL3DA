@@ -91,7 +91,7 @@ TODO
 
 **Step 3. \[Optional\] Download Pre-trained LLM weights**
 
-If your server has no trouble auto-downloading pre-trained LLM weights from huggingface🤗, feel free to skip this step.
+If your server has no trouble auto-downloading weights from huggingface🤗, feel free to skip this step.
 
 Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
 ```
