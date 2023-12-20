@@ -67,6 +67,9 @@ plyfile
 'trimesh=2.35.39'
 ```
 
+Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/upload/main). The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
+
+
 ### 2. Data
 
 **Step 1. Prepare ScanNet 3D Data**
@@ -81,6 +84,21 @@ python batch_load_scannet_data.py
 **Step 2. Prepare Language Annotations**
 
 TODO
+
+
+**Step 3. \[Optional\] Download Pre-trained LLM weights**
+
+Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
+```
+./facebook/opt-1.3b/
+  config.json
+  merges.txt
+  pytorch_model.bin
+  special_tokens_map.json
+  tokenizer_config.json
+  vocab.json
+```
+You could also use our codebase to train a family of LL3DAs with different LLM backends, *i.e.* `facebook/opt-2.7b`, `facebook/opt-6.7b`, `llama-7B`.
 
 
 </details>
