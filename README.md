@@ -49,9 +49,7 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 ## ⚡ Quick Start
 
 <details>
-  <summary><b>Setup and download</b></summary>
-
-### 1. Environment
+  <summary><b>Environment Setup</b></summary>
 
 Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should install the following packages:
 
@@ -68,9 +66,12 @@ plyfile
 ```
 
 Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main). The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
+</details>
 
 
-### 2. Data
+
+<details>
+  <summary><b>Data Preparation</b></summary>
 
 **Step 1. Prepare ScanNet 3D Data**
 
@@ -99,9 +100,10 @@ Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingfa
   vocab.json
 ```
 You could also use our codebase to train a family of LL3DAs with different LLM backends, *i.e.* `facebook/opt-2.7b`, `facebook/opt-6.7b`, `llama-7B`.
-
-
 </details>
+
+
+
 
 ## 💻 Train your own models
 
