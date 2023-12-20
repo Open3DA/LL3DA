@@ -78,7 +78,7 @@ Our repo requires the 3D data from ScanNet, the natural language annotations, an
 **Step 1. Prepare ScanNet 3D Data**
 
 1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
-2. Change the SCANNET_DIR to the scans folder in [`data/scannet/batch_load_scannet_data.py`](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
+2. Change the `SCANNET_DIR` to the scans folder in [`data/scannet/batch_load_scannet_data.py`](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
 ```{bash}
 cd data/scannet/
 python batch_load_scannet_data.py
