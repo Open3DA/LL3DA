@@ -67,7 +67,7 @@ plyfile
 'trimesh=2.35.39'
 ```
 
-Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/upload/main). The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
+Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main). The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
 
 
 ### 2. Data
