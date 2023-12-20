@@ -122,7 +122,7 @@ You could also use our codebase to train a family of LL3DAs with different LLM b
 
 ## 📖 Citation
 
-If you find our code or paper helps, please consider starring ⭐ us and citing:
+If you find our code or paper helpful, please consider starring ⭐ us and citing:
 
 ```{bibtex}
 @misc{chen2023ll3da,
