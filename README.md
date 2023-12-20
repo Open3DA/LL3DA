@@ -65,7 +65,7 @@ plyfile
 'trimesh=2.35.39'
 ```
 
-Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main). The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
+Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main) and store them under the [`./bert-base-embedding`](./bert-base-embedding) folder. The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
 </details>
 
 
@@ -76,7 +76,7 @@ Download the pre-processed BERT embedding weights from [huggingface](https://hug
 **Step 1. Prepare ScanNet 3D Data**
 
 1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
-2. Change the SCANNET_DIR to the scans folder in [data/scannet/batch_load_scannet_data.py](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
+2. Change the SCANNET_DIR to the scans folder in [`data/scannet/batch_load_scannet_data.py`](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
 ```{bash}
 cd data/scannet/
 python batch_load_scannet_data.py
