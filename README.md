@@ -53,7 +53,35 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 
 ### 1. Environment
 
+Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should install the following packages:
+
+```
+h5py
+scipy
+cython
+plyfile
+'trimesh>=2.35.39,<2.35.40'
+'networkx>=2.2,<2.3'
+'torch=1.13.1+cu116'
+'transformers=4.34.1'
+'trimesh=2.35.39'
+```
+
 ### 2. Data
+
+**Step 1. Prepare ScanNet 3D Data**
+
+1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
+2. Change the SCANNET_DIR to the scans folder in [data/scannet/batch_load_scannet_data.py](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
+```{bash}
+cd data/scannet/
+python batch_load_scannet_data.py
+```
+
+**Step 2. Prepare Language Annotations**
+
+TODO
+
 
 </details>
 
