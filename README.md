@@ -51,9 +51,7 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 <details>
   <summary><b>Environment Setup</b></summary>
 
-**Step 1. Build Dependencies.** 
-
-Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should first install the following packages:
+**Step 1. Build Dependencies.** Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should first install the following packages:
 
 ```
 h5py
@@ -79,9 +77,7 @@ cd utils
 python cython_compile.py build_ext --inplace
 ```
 
-**Step 2. Download pre-trained embeddings.**
-
-Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main) and store them under the [`./bert-base-embedding`](./bert-base-embedding) folder. The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
+**Step 2. Download pre-trained embeddings.** Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main) and store them under the [`./bert-base-embedding`](./bert-base-embedding) folder. The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
 
 </details>
 
@@ -92,7 +88,7 @@ Download the pre-processed BERT embedding weights from [huggingface](https://hug
 
 Our repo requires the 3D data from ScanNet, the natural language annotations, and the pre-trained LLM weights.
 
-**Step 1. Prepare ScanNet 3D Data**
+**Step 1. Download and Prepare the ScanNet 3D Data.**
 
 1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
 2. Change the `SCANNET_DIR` to the scans folder in [`data/scannet/batch_load_scannet_data.py`](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
@@ -106,9 +102,7 @@ python batch_load_scannet_data.py
 TODO
 
 
-**Step 3. \[Optional\] Download Pre-trained LLM weights**
-
-If your server has no trouble auto-downloading weights from huggingface🤗, feel free to skip this step.
+**Step 3. \[Optional\] Download Pre-trained LLM weights.** If your server has no trouble auto-downloading weights from huggingface🤗, feel free to skip this step.
 
 Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
 ```
