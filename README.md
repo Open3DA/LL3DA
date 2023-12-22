@@ -51,7 +51,9 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 <details>
   <summary><b>Environment Setup</b></summary>
 
-**Step 1. Dependencies.** Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should install the following packages:
+**Step 1. Build Dependencies.** 
+
+Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should install the following packages:
 
 ```
 h5py
@@ -66,6 +68,7 @@ plyfile
 ```
 
 **Step 2. Download pre-trained embeddings.**
+
 Download the pre-processed BERT embedding weights from [huggingface](https://huggingface.co/CH3COOK/bert-base-embedding/tree/main) and store them under the [`./bert-base-embedding`](./bert-base-embedding) folder. The weights are **the same** from the official BERT model, we just modified the names of certain parameters.
 
 </details>
