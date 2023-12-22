@@ -53,7 +53,7 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 
 **Step 1. Build Dependencies.** 
 
-Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should install the following packages:
+Our code is tested with CUDA 11.6 and Python 3.8.16. To run the codes, you should first install the following packages:
 
 ```
 h5py
@@ -65,6 +65,18 @@ plyfile
 'torch=1.13.1+cu116'
 'transformers=4.34.1'
 'trimesh=2.35.39'
+```
+
+After that, build the `pointnet2` and accelerated `giou` from source:
+
+```{bash}
+cd third_party/pointnet2
+python setup.py install
+```
+
+```{bash}
+cd utils
+python cython_compile.py build_ext --inplace
 ```
 
 **Step 2. Download pre-trained embeddings.**
