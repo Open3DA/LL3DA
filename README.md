@@ -62,7 +62,6 @@ plyfile
 'networkx>=2.2,<2.3'
 'torch=1.13.1+cu116'
 'transformers=4.34.1'
-'trimesh=2.35.39'
 ```
 
 After that, build the `pointnet2` and accelerated `giou` from source:
