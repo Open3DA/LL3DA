@@ -98,8 +98,43 @@ python batch_load_scannet_data.py
 
 **Step 2. Prepare Language Annotations**
 
-TODO
+To train the model, you are required to prepare language annotations from `ScanRefer`, `Nr3D`, `ScanQA`, and the ScanNet part of `3D-LLM`.
 
+1. `ScanRefer`. Follow the commands [here](https://github.com/daveredrum/ScanRefer) to download the `ScanRefer` dataset.
+2. `Nr3D`. Follow the commands [here](https://referit3d.github.io/#dataset) to download the `Nr3D` dataset, and [pre-process](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/parse_nr3d.py) it.
+3. `ScanQA`. Follow the commands [here](https://github.com/ATR-DBI/ScanQA/blob/main/docs/dataset.md) to download the `ScanQA` dataset.
+4. `3D-LLM`. The data are located at [here](./data/3D_LLM). We have also shared our pre-processing scripts [here](./data/3D_LLM/pre-process-3D-LLM.py).
+
+Finally, organize the files into the following folders:
+
+```
+./data/
+  ScanRefer/
+    ScanRefer_filtered_train.json
+    ScanRefer_filtered_train.txt
+    ScanRefer_filtered_val.json
+    ScanRefer_filtered_val.txt
+
+  Nr3D/
+    nr3d_train.json
+    nr3d_train.txt
+    nr3d_val.json
+    nr3d_val.txt
+
+  ScanQA/
+    ScanQA_v1.0_test_w_obj.json
+    ScanQA_v1.0_test_wo_obj.json
+    ScanQA_v1.0_train.json
+    ScanQA_v1.0_val.json
+
+  3D_LLM/
+    3d_llm_embodied_dialogue_filtered_train.json
+    3d_llm_embodied_dialogue_filtered_val.json
+    3d_llm_embodied_planning_filtered_train.json
+    3d_llm_embodied_planning_filtered_val.json
+    3d_llm_scene_description_train.json
+    3d_llm_scene_description_val.json
+```
 
 **Step 3. \[Optional\] Download Pre-trained LLM weights.** If your server has no trouble auto-downloading weights from huggingface🤗, feel free to skip this step.
 
