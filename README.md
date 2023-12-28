@@ -148,7 +148,9 @@ Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingfa
   tokenizer_config.json
   vocab.json
 ```
-You could also use our codebase to train a family of LL3DAs with different LLM backends, *i.e.* `facebook/opt-2.7b`, `facebook/opt-6.7b`, `llama-7B`.
+You could also use our codebase to train a family of LL3DAs with different causal LLM backends, *i.e.* [`facebook/opt-2.7b`](https://huggingface.co/facebook/opt-2.7b) and [`meta-llama/Llama-2-7b-hf`](https://huggingface.co/meta-llama/Llama-2-7b-hf).
+
+
 </details>
 
 
