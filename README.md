@@ -42,6 +42,8 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 - [x] Upload our paper to arXiv and build project pages.
 - [x] Pray for acceptance.
 - [x] Upload all the code and training scripts.
+- [ ] Add support for training larger LLM backends.
+- [ ] Add local demo interface.
 - [ ] Release pre-trained weights.
 - [ ] Train on larger 3D VL benchmarks and scale up models.
 
