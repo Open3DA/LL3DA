@@ -15,7 +15,7 @@ from utils.dist import init_distributed, is_distributed, is_primary, get_rank, b
 
 
 def make_args_parser():
-    parser = argparse.ArgumentParser("End-to-End 3D Dense Captioning with Vote2Cap-DETR", add_help=False)
+    parser = argparse.ArgumentParser("LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning", add_help=False)
 
     ##### Optimizer #####
     parser.add_argument("--base_lr", default=5e-4, type=float)

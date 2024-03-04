@@ -19,18 +19,9 @@
 ![teaser.gif](assets/teaser-simutaneous.gif)
 
 
-<!-- <div align="center">
-|                                                   Teaser Video                                                   |                                                    Demo Video                                                    |
-| :--------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-| <video src="https://github.com/OpenMotionLab/MotionGPT/assets/120085716/a741e162-b2f4-4f65-af8e-aa19c4115a9e" /> | <video src="https://github.com/OpenMotionLab/MotionGPT/assets/120085716/ae966d17-6326-43e6-8d5b-8562cf3ffd52" /> |
-</div> -->
-
-<!-- ### [MotionGPT: Human Motion as a Foreign Language](https://motion-gpt.github.io/) -->
-<!-- ### [Project Page](https://motion-gpt.github.io/) | [Arxiv Paper](https://arxiv.org/abs/2306.14795) | [HuggingFace Demo](xxx) -->
-
 ## 🏃 Intro LL3DA
 
-LL3DA is a Large Language 3D Assistant that could respond to both visual and textual interactions with **complex 3D environments**.
+LL3DA is a Large Language 3D Assistant that could respond to both visual and textual interactions within **complex 3D environments**.
 <!-- 
 <details>
     <summary><b>Technical details</b></summary> -->
@@ -39,12 +30,20 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 
 ![pipeline.png](assets/pipeline.png)
 
-<!-- <img width="1194" alt="pipeline" src="assets/pipeline.png">
-</details> -->
 
 ## 🚩 News
 
-- [2023/11/30] Upload paper and init project
+- 2024-03-04. 💥 The code is fully released! Now you can train your customized models!
+- 2024-02-27. 🎉 LL3DA is accepted by <font color="#dd0000">CVPR 2024</font>! See you in Seattle!
+- 2023-11-30. 📣 Upload paper and init project
+
+**TODO**:
+
+- [x] Upload our paper to arXiv and build project pages.
+- [x] Pray for acceptance.
+- [x] Upload all the code and training scripts.
+- [ ] Release pre-trained weights.
+- [ ] Train on larger 3D VL benchmarks and scale up models.
 
 ## ⚡ Quick Start
 
@@ -61,7 +60,7 @@ plyfile
 'trimesh>=2.35.39,<2.35.40'
 'networkx>=2.2,<2.3'
 'torch=1.13.1+cu116'
-'transformers=4.34.1'
+'transformers>=4.37.0'
 ```
 
 After that, build the `pointnet2` and accelerated `giou` from source:
@@ -105,6 +104,9 @@ To train the model, you are required to prepare language annotations from `ScanR
 3. `ScanQA`. Follow the commands [here](https://github.com/ATR-DBI/ScanQA/blob/main/docs/dataset.md) to download the `ScanQA` dataset.
 4. `3D-LLM`. The data are located at [here](./data/3D_LLM). We have also shared our pre-processing scripts [here](./data/3D_LLM/pre-process-3D-LLM.py).
 
+We will update the latest released data (V3) from 3D-LLM.
+
+
 Finally, organize the files into the following folders:
 
 ```
@@ -138,7 +140,7 @@ Finally, organize the files into the following folders:
 
 **Step 3. \[Optional\] Download Pre-trained LLM weights.** If your server has no trouble auto-downloading weights from huggingface🤗, feel free to skip this step.
 
-Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
+Download files from the `opt-1.3b` checkpoint (or any other decoder-only LLM) at [huggingface](https://huggingface.co/facebook/opt-1.3b/tree/main), and store them under the `./facebook/opt-1.3b` directory. Make sure the required files are downloaded:
 ```
 ./facebook/opt-1.3b/
   config.json
@@ -148,7 +150,6 @@ Download files from the `opt-1.3b` checkpoint at [huggingface](https://huggingfa
   tokenizer_config.json
   vocab.json
 ```
-You could also use our codebase to train a family of LL3DAs with different causal LLM backends, *i.e.* [`facebook/opt-2.7b`](https://huggingface.co/facebook/opt-2.7b) and [`meta-llama/Llama-2-7b-hf`](https://huggingface.co/meta-llama/Llama-2-7b-hf).
 
 
 </details>
@@ -158,12 +159,75 @@ You could also use our codebase to train a family of LL3DAs with different causa
 
 ## 💻 Train your own models
 
+Our code should support **any decoder-only LLMs** (`facebook/opt-1.3b`, `gpt2-xl`, `meta-llama/Llama-2-7b` or even the **<font color="#dd0000">LATEST</font>** `Qwen/Qwen1.5-1.8B` and `Qwen/Qwen1.5-4B`). Check out the following table for recommended LLMs in different scales! **By default, the models are trained with eight GPUs.**
+
+|            <1B            |           1B-4B           |                ~7B               |
+|:-------------------------:|:-------------------------:|:--------------------------------:|
+|        `gpt2`(124m)       |   `TinyLlama-1.1B`(1.1b)  |     `facebook/opt-6.7b`(6.7b)    |
+| `facebook/opt-125m`(125m) | `facebook/opt-1.3b`(1.3b) | `meta-llama/Llama-2-7b-hf`(6.7b) |
+|    `gpt2-medium`(355m)    |      `gpt2-xl`(1.6b)      |      `Qwen/Qwen1.5-7B`(7.7b)     |
+| `Qwen/Qwen1.5-0.5B`(620m) | `Qwen/Qwen1.5-1.8B`(1.8b) |                 -                |
+|     `gpt2-large`(774m)    | `facebook/opt-2.7b`(2.7b) |                 -                |
+|             -             |  `microsoft/phi-2`(2.8b)  |                 -                |
+|             -             |  `Qwen/Qwen1.5-4B`(3.9b)  |                 -                |
+
+We provide training scripts in the `scripts` folder with different LLM backends. Feel free to modify the hyper parameters in those commands.
+
+For other LLM backends, please modify the commands manually by changing `--vocab` to other LLMs.
+
+
 <details>
   <summary><b>Training</b></summary>
+
+  To train the model as a 3D generalist:
+
+  ```{bash}
+  bash scripts/opt-1.3b/train.generalist.sh
+  ```
+
+  After the model is trained, you can tune the model on ScanQA for 3D Question Answering:
+
+  ```{bash}
+  bash scripts/opt-1.3b/tuning.scanqa.sh
+  ```
+
+  And, on ScanRefer / Nr3D for 3D Dense Captioning:
+
+  ```{bash}
+  bash scripts/opt-1.3b/tuning.scanrefer.sh
+  bash scripts/opt-1.3b/tuning.nr3d.sh
+  ```
+
+  You can also tune the model to predict bounding boxes for open vocabulary object detection!
+
+  ```{bash}
+  bash scripts/opt-1.3b/tuning.ovdet.sh
+  ```
+
 </details>
 
 <details>
   <summary><b>Evaluation</b></summary>
+
+  To evaluate the model as a 3D generalist:
+
+  ```{bash}
+  bash scripts/opt-1.3b/eval.generalist.sh
+  ```
+
+  On ScanQA for 3D Question Answering:
+
+  ```{bash}
+  bash scripts/opt-1.3b/eval.scanqa.sh
+  ```
+
+  And, on ScanRefer / Nr3D for 3D Dense Captioning:
+
+  ```{bash}
+  bash scripts/opt-1.3b/eval.scanrefer.sh
+  bash scripts/opt-1.3b/eval.nr3d.sh
+  ```
+
 </details>
 
 
@@ -189,4 +253,4 @@ Thanks to [Vote2Cap-DETR](https://github.com/ch3cook-fdu/Vote2Cap-DETR), [3D-LLM
 
 ## License
 
-This code is distributed under an [MIT LICENSE](LICENSE). If there are any problem regarding our project, please open an issue.
+This code is distributed under an [MIT LICENSE](LICENSE). If there are any problem regarding our paper and code, feel free to open an issue!
