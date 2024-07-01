@@ -90,6 +90,9 @@ Our repo requires the 3D data from ScanNet, the natural language annotations, an
 
 **Step 1. Download and Prepare the ScanNet 3D Data.**
 
+**<font color="#dd0000">Updates 2024-07-01:</font>** You can download the pre-processed data from [here](https://huggingface.co/CH3COOK/LL3DA-weight-release/blob/main/scannet_data.zip).
+
+
 1. Follow the instructions [here](https://github.com/ch3cook-fdu/Vote2Cap-DETR/tree/master/data/scannet) and download the ScanNetV2 dataset. 
 2. Change the `SCANNET_DIR` to the scans folder in [`data/scannet/batch_load_scannet_data.py`](https://github.com/ch3cook-fdu/Vote2Cap-DETR/blob/master/data/scannet/batch_load_scannet_data.py#L16), and run the following commands.
 ```{bash}
@@ -160,6 +163,12 @@ Download files from the `opt-1.3b` checkpoint (or any other decoder-only LLM) at
 
 
 ## 💻 Train your own models
+
+**<font color="#dd0000">Updates 2024-07-01:</font>** The released version is slightly different from our paper implementation. In our released version, we *standardized the data format* and *dropped duplicated text annotations*. To reproduce our reported results, please use the scripts provided in `scripts-v0` to produce the generalist weights.
+
+```
+bash scripts-v0/opt-1.3b/train.generalist.sh
+```
 
 Our code should support **any decoder-only LLMs** (`facebook/opt-1.3b`, `gpt2-xl`, `meta-llama/Llama-2-7b` or even the **<font color="#dd0000">LATEST</font>** `Qwen/Qwen1.5-1.8B` and `Qwen/Qwen1.5-4B`). Check out the following table for recommended LLMs in different scales! **By default, the models are trained with eight GPUs.**
 
