@@ -42,8 +42,7 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 - [x] Upload our paper to arXiv and build project pages.
 - [x] Pray for acceptance.
 - [x] Upload all the code and training scripts.
-- [x] Add support for training with larger LLM backends (~7B or above). (just use `.to_bettertransformer()`)
-- [x] Release pre-trained weights.
+- [x] Release pre-trained weights. (see [checkpoint](https://huggingface.co/CH3COOK/LL3DA-weight-release/blob/main/ll3da-opt-1.3b.pth))
 - [ ] Add local demo interface.
 - [ ] Train on larger 3D VL benchmarks and scale up models.
 
