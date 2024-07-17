@@ -42,9 +42,9 @@ Recent advances in Large Multimodal Models (LMM) have made it possible for vario
 - [x] Upload our paper to arXiv and build project pages.
 - [x] Pray for acceptance.
 - [x] Upload all the code and training scripts.
-- [ ] Add support for training with larger LLM backends (~7B or above).
+- [x] Add support for training with larger LLM backends (~7B or above). (just use `.to_bettertransformer()`)
+- [x] Release pre-trained weights.
 - [ ] Add local demo interface.
-- [ ] Release pre-trained weights.
 - [ ] Train on larger 3D VL benchmarks and scale up models.
 
 ## ⚡ Quick Start
@@ -190,7 +190,7 @@ For other LLM backends, please modify the commands manually by changing `--vocab
 <details>
   <summary><b>Training</b></summary>
 
-  To train the model as a 3D generalist:
+  To train the model as a 3D generalist: (We have also uploaded the pre-trained weights to [huggingface](https://huggingface.co/CH3COOK/LL3DA-weight-release/blob/main/ll3da-opt-1.3b.pth).)
 
   ```{bash}
   bash scripts/opt-1.3b/train.generalist.sh
